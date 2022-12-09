@@ -6,8 +6,8 @@ import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
 
-    ImgFondo p = new ImgFondo();
     int intentos;
+    ImgFondo p = new ImgFondo();
 
     public Login() {
         this.setContentPane(new ImgFondo());
@@ -162,14 +162,14 @@ public class Login extends javax.swing.JFrame {
         contraseña = txt_password.getText();
         if (usuario.equalsIgnoreCase("UTN") && contraseña.equals("123")) {
             dispose();//Ocultamos el formulario de login
-            JOptionPane.showMessageDialog(this, "Bienvenido al sistema de registro...", "Mensaje de Bienvenida", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Bienvenido al sistema de registro", "Mensaje de Bienvenida", JOptionPane.INFORMATION_MESSAGE);
             MenuOpciones opciones = new MenuOpciones();
             opciones.setVisible(true);
         } else if (intentos == 3) {
             JOptionPane.showMessageDialog(null, "Has excedido el numero de intentos para el ingreso de sistemas", "Verificar Datos", JOptionPane.ERROR);
             System.exit(0);
         } else {
-            JOptionPane.showMessageDialog(this, "Datos incorrectos");
+            JOptionPane.showMessageDialog(this, "Datos incorrectos intenta nuevamente \n Quedan" + (3-intentos) + " Intentos ");
             this.txt_usuario.setText("");
             this.txt_password.setText("");
             txt_usuario.requestFocus();
