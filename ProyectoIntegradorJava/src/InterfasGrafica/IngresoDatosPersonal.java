@@ -26,10 +26,8 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         initComponents();
         this.cabecera.addElement("Nombre");
         this.cabecera.addElement("Apellido");
-        this.cabecera.addElement("Genero");
         this.cabecera.addElement("DNI");
         this.cabecera.addElement("CUIT");
-        this.cabecera.addElement("Fecha Ingreso");
         this.cabecera.addElement("Categoria");
         this.cabecera.addElement("Sueldo");
         mdlTable = new DefaultTableModel(cabecera, 0);
@@ -61,8 +59,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         jtb_registropersonal = new javax.swing.JTable();
         jbt_regresar = new javax.swing.JButton();
         Jbt_guardar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        txt_fecha = new com.toedter.calendar.JDateChooser();
         btn_buscar = new javax.swing.JButton();
         btn_actualizar = new javax.swing.JButton();
         btn_baja = new javax.swing.JButton();
@@ -131,12 +127,12 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         jcb_categoria.setBackground(new java.awt.Color(153, 153, 153));
         jcb_categoria.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jcb_categoria.setForeground(new java.awt.Color(255, 255, 255));
-        jcb_categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Categoria", "Contratado", "Pasante", "Planta Permanente" }));
+        jcb_categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Categoria", "Contratado", "Planta Permanente" }));
 
         jcb_sueldo.setBackground(new java.awt.Color(153, 153, 153));
         jcb_sueldo.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jcb_sueldo.setForeground(new java.awt.Color(255, 255, 255));
-        jcb_sueldo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sueldo", "110000", "150000", "180000" }));
+        jcb_sueldo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sueldo", "160000", "220000" }));
 
         jtb_registropersonal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -175,13 +171,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                 Jbt_guardarMouseClicked(evt);
             }
         });
-
-        jLabel5.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("Fecha Ingreso");
-
-        txt_fecha.setMinSelectableDate(new java.util.Date(-62135755119000L));
 
         btn_buscar.setBackground(new java.awt.Color(153, 153, 153));
         btn_buscar.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -234,19 +223,17 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(61, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlb_nombre)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap(61, Short.MAX_VALUE)
-                                .addComponent(jlb_nombre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel2))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(3, 3, 3)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -254,18 +241,15 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                                 .addGap(28, 28, 28)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt_dni, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt_dni, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jcb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31)
-                                .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(197, 197, 197))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_buscar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -288,22 +272,16 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(txt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(txt_dni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jcb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jcb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
                         .addComponent(Jbt_guardar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_buscar)
@@ -366,7 +344,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
 
         String dni = txt_dni.getText();
         String cuit = txt_cuit.getText();
-        Date fechaIngreso = txt_fecha.getDate();
         String categoria = jcb_categoria.getSelectedItem().toString();
         double sueldo = Double.parseDouble(jcb_sueldo.getSelectedItem().toString());
 
@@ -374,7 +351,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         personal.setApellido(apellido);
         personal.setDni(dni);
         personal.setCuit(cuit);
-        personal.setFechaIngreso(fechaIngreso);
         personal.setCategoria(categoria);
         personal.setSueldo(sueldo);
         metodos.guardar(personal);
@@ -385,7 +361,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         txt_apellido.setText("");
         txt_dni.setText("");
         txt_cuit.setText("");
-        txt_fecha.setDate(fechaIngreso);
         jcb_categoria.setSelectedItem("");
         jcb_sueldo.setSelectedItem("");
         jtb_registropersonal.setModel(metodos.listaPersona());
@@ -461,7 +436,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbt_regresar;
@@ -472,7 +446,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     private javax.swing.JTextField txt_apellido;
     private javax.swing.JTextField txt_cuit;
     private javax.swing.JTextField txt_dni;
-    private com.toedter.calendar.JDateChooser txt_fecha;
     private javax.swing.JTextField txt_nombre;
     // End of variables declaration//GEN-END:variables
 }
