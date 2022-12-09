@@ -5,7 +5,10 @@ import img.ImgFondo;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
+
     ImgFondo p = new ImgFondo();
+    int intentos;
+
     public Login() {
         this.setContentPane(new ImgFondo());
         initComponents();
@@ -158,22 +161,28 @@ public class Login extends javax.swing.JFrame {
         usuario = txt_usuario.getText();
         contraseña = txt_password.getText();
         if (usuario.equalsIgnoreCase("UTN") && contraseña.equals("123")) {
-            JOptionPane.showMessageDialog(this, "Bienvenido al sistema de registro...");
+            dispose();//Ocultamos el formulario de login
+            JOptionPane.showMessageDialog(this, "Bienvenido al sistema de registro...", "Mensaje de Bienvenida", JOptionPane.INFORMATION_MESSAGE);
             MenuOpciones opciones = new MenuOpciones();
             opciones.setVisible(true);
+        } else if (intentos == 3) {
+            JOptionPane.showMessageDialog(null, "Has excedido el numero de intentos para el ingreso de sistemas", "Verificar Datos", JOptionPane.ERROR);
+            System.exit(0);
         } else {
             JOptionPane.showMessageDialog(this, "Datos incorrectos");
             this.txt_usuario.setText("");
             this.txt_password.setText("");
+            txt_usuario.requestFocus();
+            intentos = intentos + 1;
         }
     }//GEN-LAST:event_btn_aceptarMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int a = JOptionPane.YES_NO_OPTION;
-        int resultado = JOptionPane.showConfirmDialog(this, "Desea Salir","Salir",a);
-        if(resultado ==0){
+        int resultado = JOptionPane.showConfirmDialog(this, "Desea Salir", "Salir", a);
+        if (resultado == 0) {
             System.exit(0);
-            
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
