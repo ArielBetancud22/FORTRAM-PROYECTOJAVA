@@ -6,7 +6,6 @@ import InterfasGrafica.Condicion;
 import InterfasGrafica.Estadistica;
 import InterfasGrafica.IngresoDatosPersonal;
 import InterfasGrafica.ListarPersonal;
-import InterfasGrafica.Users;
 import img.ImgFondo;
 import javax.swing.JOptionPane;
 
