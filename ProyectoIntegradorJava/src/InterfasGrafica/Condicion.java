@@ -205,8 +205,8 @@ public class Condicion extends javax.swing.JFrame {
 
     private void btn_reciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reciboActionPerformed
        if (chk_planta.isSelected()) {
-            //ReciboDeSueldo sueldo = new ReciboDeSueldo();
-           // sueldo.setVisible(true);
+            ReciboDeSueldo sueldo = new ReciboDeSueldo();
+            sueldo.setVisible(true);
         }
     }//GEN-LAST:event_btn_reciboActionPerformed
 

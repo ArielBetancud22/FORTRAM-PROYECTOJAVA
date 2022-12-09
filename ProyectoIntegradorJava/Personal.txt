@@ -1,3 +1,4 @@
 Rosa|Lopez|14023897|21140238973|Contratado|110000|
 Soledad|Aranza|123|201236|Pasante|180000|
 Lucas|Viscaino|28745632|20287456323|Tue Dec 14 22:23:44 ART 2021|Pasante|110000.0
+Maria Rosa|Sanchez|20145786|24201457863|null|Contratado|160000.0
