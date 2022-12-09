@@ -208,7 +208,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
     private void btn_calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_calcularActionPerformed
         double sueldoBasico, bonificacion, sueldoBruto, descuento, sueldoNeto;
         sueldoBasico = Double.parseDouble(txt_sueldo.getText());
-        bonificacion = (sueldoBasico * 20)/100;
+        bonificacion = sueldoBasico * 0.2;
         sueldoBruto = sueldoBasico + bonificacion;
         descuento = sueldoBruto * 0.1;
         sueldoNeto = sueldoBruto - descuento;
@@ -217,6 +217,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
         txt_bruto.setText(String.valueOf(sueldoBruto));
         txt_descuento.setText(String.valueOf(descuento));
         txt_neto.setText(String.valueOf(sueldoNeto));
+
     }//GEN-LAST:event_btn_calcularActionPerformed
 
     private void txt_sueldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_sueldoActionPerformed
@@ -224,7 +225,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_sueldoActionPerformed
 
     private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
-       System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_btn_salirActionPerformed
 
     /**
