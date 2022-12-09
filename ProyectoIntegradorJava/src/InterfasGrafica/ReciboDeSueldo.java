@@ -1,11 +1,13 @@
 package InterfasGrafica;
 
+
+
 public class ReciboDeSueldo extends javax.swing.JFrame {
 
     public ReciboDeSueldo() {
         initComponents();
         this.setLocationRelativeTo(null);
-    }
+           }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -25,6 +27,10 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
         btn_nuevo = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
         txt_sueldo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txt_hora = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txt_precio = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -116,13 +122,33 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setText("Horas");
+
+        txt_hora.setBackground(new java.awt.Color(255, 255, 255));
+        txt_hora.setForeground(new java.awt.Color(0, 0, 0));
+        txt_hora.setToolTipText("");
+
+        jLabel7.setText("precio");
+
+        txt_precio.setBackground(new java.awt.Color(255, 255, 255));
+        txt_precio.setForeground(new java.awt.Color(0, 0, 0));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel7)
+                        .addGap(4, 4, 4)
+                        .addComponent(txt_precio))
+                    .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
@@ -141,8 +167,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txt_monto, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
@@ -153,7 +178,13 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txt_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(txt_precio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txt_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -173,7 +204,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txt_neto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_calcular)
                     .addComponent(btn_nuevo)
@@ -201,17 +232,24 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
         txt_bruto.setText("");
         txt_descuento.setText("");
         txt_neto.setText("");
-        txt_sueldo.requestFocus();
+        txt_hora.setText("");
+        txt_precio.setText("");
+        txt_hora.requestFocus();
 
     }//GEN-LAST:event_btn_nuevoActionPerformed
 
     private void btn_calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_calcularActionPerformed
-        double sueldoBasico, bonificacion, sueldoBruto, descuento, sueldoNeto;
-        sueldoBasico = Double.parseDouble(txt_sueldo.getText());
-        bonificacion = sueldoBasico * 0.2;
+        double hora, precio, sueldoBasico, bonificacion, sueldoBruto, descuento, sueldoNeto;
+
+        hora = Double.parseDouble(txt_hora.getText());
+        precio = Double.parseDouble(txt_precio.getText());
+
+        sueldoBasico = hora * precio;
+        bonificacion = sueldoBasico * 0.3;
         sueldoBruto = sueldoBasico + bonificacion;
         descuento = sueldoBruto * 0.1;
         sueldoNeto = sueldoBruto - descuento;
+
         txt_sueldo.setText(String.valueOf(sueldoBasico));
         txt_monto.setText(String.valueOf(bonificacion));
         txt_bruto.setText(String.valueOf(sueldoBruto));
@@ -272,11 +310,15 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_bruto;
     private javax.swing.JTextField txt_descuento;
+    private javax.swing.JTextField txt_hora;
     private javax.swing.JTextField txt_monto;
     private javax.swing.JTextField txt_neto;
+    private javax.swing.JTextField txt_precio;
     private javax.swing.JTextField txt_sueldo;
     // End of variables declaration//GEN-END:variables
 }
