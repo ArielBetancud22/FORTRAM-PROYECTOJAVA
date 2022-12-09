@@ -59,7 +59,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         jtb_registropersonal = new javax.swing.JTable();
         jbt_regresar = new javax.swing.JButton();
         Jbt_guardar = new javax.swing.JButton();
-        btn_buscar = new javax.swing.JButton();
         btn_actualizar = new javax.swing.JButton();
         btn_baja = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
@@ -172,16 +171,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
             }
         });
 
-        btn_buscar.setBackground(new java.awt.Color(153, 153, 153));
-        btn_buscar.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btn_buscar.setForeground(new java.awt.Color(0, 0, 0));
-        btn_buscar.setText("Buscar");
-        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_buscarActionPerformed(evt);
-            }
-        });
-
         btn_actualizar.setBackground(new java.awt.Color(153, 153, 153));
         btn_actualizar.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btn_actualizar.setForeground(new java.awt.Color(0, 0, 0));
@@ -252,7 +241,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_buscar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_actualizar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_baja, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbt_regresar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -280,20 +268,18 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Jbt_guardar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_buscar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_actualizar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(10, 10, 10)
                         .addComponent(btn_baja)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbt_regresar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btn_salir))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
 
@@ -323,19 +309,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         Actualizar datos = new Actualizar();
         datos.setVisible(true);
     }//GEN-LAST:event_btn_actualizarActionPerformed
-
-    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
-
-        txt_nombre.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(final KeyEvent e) {
-                String cadena = txt_nombre.getText();
-                txt_nombre.setText(cadena);
-                repaint();
-                filtro();
-            }
-        });
-    }//GEN-LAST:event_btn_buscarActionPerformed
 
     private void Jbt_guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jbt_guardarMouseClicked
         mdlTable = new DefaultTableModel();
@@ -430,7 +403,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     private javax.swing.JButton Jbt_guardar;
     private javax.swing.JButton btn_actualizar;
     private javax.swing.JButton btn_baja;
-    private javax.swing.JButton btn_buscar;
     private javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
