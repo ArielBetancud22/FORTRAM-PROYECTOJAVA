@@ -37,7 +37,6 @@ public class MenuOpciones extends javax.swing.JFrame {
         btn_estadistica = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
         btn_registrar = new javax.swing.JButton();
-        btn_usuarios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -82,10 +81,15 @@ public class MenuOpciones extends javax.swing.JFrame {
 
         btn_condicion.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btn_condicion.setForeground(new java.awt.Color(0, 0, 0));
-        btn_condicion.setText("Condición Personal");
+        btn_condicion.setText("Estado del personal ");
         btn_condicion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_condicionMouseClicked(evt);
+            }
+        });
+        btn_condicion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_condicionActionPerformed(evt);
             }
         });
         jPanel1.add(btn_condicion);
@@ -93,7 +97,7 @@ public class MenuOpciones extends javax.swing.JFrame {
 
         btn_estadistica.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btn_estadistica.setForeground(new java.awt.Color(0, 0, 0));
-        btn_estadistica.setText("Estadista de Sueldos ");
+        btn_estadistica.setText("Estadisticas");
         btn_estadistica.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_estadisticaMouseClicked(evt);
@@ -121,7 +125,7 @@ public class MenuOpciones extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btn_salir);
-        btn_salir.setBounds(150, 380, 90, 30);
+        btn_salir.setBounds(150, 330, 90, 30);
 
         btn_registrar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btn_registrar.setForeground(new java.awt.Color(0, 0, 0));
@@ -134,18 +138,6 @@ public class MenuOpciones extends javax.swing.JFrame {
         jPanel1.add(btn_registrar);
         btn_registrar.setBounds(60, 80, 150, 30);
 
-        btn_usuarios.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btn_usuarios.setForeground(new java.awt.Color(0, 0, 0));
-        btn_usuarios.setText("Usuarios");
-        btn_usuarios.setPreferredSize(new java.awt.Dimension(108, 40));
-        btn_usuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_usuariosActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_usuarios);
-        btn_usuarios.setBounds(60, 280, 150, 30);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,7 +149,9 @@ public class MenuOpciones extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 9, Short.MAX_VALUE))
         );
 
         pack();
@@ -202,12 +196,6 @@ public class MenuOpciones extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_salirActionPerformed
 
-    private void btn_usuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_usuariosActionPerformed
-
-    Users usuarios = new Users();
-    usuarios.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_usuariosActionPerformed
-
     private void btn_estadisticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_estadisticaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_estadisticaActionPerformed
@@ -215,6 +203,10 @@ public class MenuOpciones extends javax.swing.JFrame {
     private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_buscarActionPerformed
+
+    private void btn_condicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_condicionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_condicionActionPerformed
 
     
     public static void main(String args[]) {
@@ -256,7 +248,6 @@ public class MenuOpciones extends javax.swing.JFrame {
     private javax.swing.JButton btn_listar;
     private javax.swing.JButton btn_registrar;
     private javax.swing.JButton btn_salir;
-    private javax.swing.JButton btn_usuarios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
