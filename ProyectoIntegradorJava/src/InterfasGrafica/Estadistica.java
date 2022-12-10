@@ -1,5 +1,6 @@
 package InterfasGrafica;
 
+import MenuOpciones.MenuOpciones;
 import img.ImgFondo;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -246,6 +247,8 @@ public class Estadistica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegresarActionPerformed
+        MenuOpciones Menu = new MenuOpciones();
+        Menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btn_RegresarActionPerformed
 

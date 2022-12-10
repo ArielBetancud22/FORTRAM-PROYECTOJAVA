@@ -1,5 +1,6 @@
 package InterfasGrafica;
 
+import MenuOpciones.MenuOpciones;
 import Metodos.Metodos;
 import img.ImgFondo;
 import java.io.BufferedWriter;
@@ -265,6 +266,8 @@ public class Actualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_jt_actualizardatosMouseClicked
 
     private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
+        MenuOpciones Menu = new MenuOpciones();
+        Menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btn_regresarActionPerformed
 

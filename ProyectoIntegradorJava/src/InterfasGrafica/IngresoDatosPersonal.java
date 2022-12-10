@@ -1,5 +1,6 @@
 package InterfasGrafica;
 
+import MenuOpciones.MenuOpciones;
 import Metodos.Metodos;
 import Personal.Personal;
 import img.ImgFondo;
@@ -345,6 +346,8 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_regresarActionPerformed
 
     private void jbt_regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt_regresarMouseClicked
+        MenuOpciones Menu = new MenuOpciones();
+        Menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbt_regresarMouseClicked
 

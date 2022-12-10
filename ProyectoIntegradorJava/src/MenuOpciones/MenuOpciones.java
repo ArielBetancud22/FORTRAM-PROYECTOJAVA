@@ -134,6 +134,11 @@ public class MenuOpciones extends javax.swing.JFrame {
                 btn_registrarMouseClicked(evt);
             }
         });
+        btn_registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_registrarActionPerformed(evt);
+            }
+        });
         jPanel1.add(btn_registrar);
         btn_registrar.setBounds(60, 80, 150, 30);
 
@@ -160,26 +165,31 @@ public class MenuOpciones extends javax.swing.JFrame {
     private void btn_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_buscarMouseClicked
         BuscarPersonal buscar = new BuscarPersonal();
         buscar.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btn_buscarMouseClicked
 
     private void btn_listarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_listarMouseClicked
        ListarPersonal listar = new ListarPersonal();
        listar.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_btn_listarMouseClicked
 
     private void btn_condicionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_condicionMouseClicked
        Condicion personal = new Condicion();
        personal.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_btn_condicionMouseClicked
 
     private void btn_estadisticaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_estadisticaMouseClicked
         Estadistica sueldo = new Estadistica();
         sueldo.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btn_estadisticaMouseClicked
 
     private void btn_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_registrarMouseClicked
         IngresoDatosPersonal persona = new IngresoDatosPersonal();
         persona.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btn_registrarMouseClicked
 
     private void btn_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_salirMouseClicked
@@ -207,7 +217,11 @@ public class MenuOpciones extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_condicionActionPerformed
 
-    
+    private void btn_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarActionPerformed
+        
+    }//GEN-LAST:event_btn_registrarActionPerformed
+
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

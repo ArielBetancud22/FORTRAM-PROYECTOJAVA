@@ -2,6 +2,7 @@
 package InterfasGrafica;
 
 import Metodos.Metodos;
+import MenuOpciones.MenuOpciones;
 import Personal.Personal;
 import img.ImgFondo;
 import java.util.Vector;
@@ -126,6 +127,8 @@ public class ListarPersonal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     private void btn_RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegresarActionPerformed
+        MenuOpciones Menu = new MenuOpciones();
+        Menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btn_RegresarActionPerformed
 
