@@ -28,6 +28,7 @@ public class Estadistica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Grupo1 = new javax.swing.ButtonGroup();
         btn_Regresar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jrb_mediana = new javax.swing.JRadioButton();
@@ -67,16 +68,19 @@ public class Estadistica extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
 
         jrb_mediana.setBackground(new java.awt.Color(204, 204, 204));
+        Grupo1.add(jrb_mediana);
         jrb_mediana.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jrb_mediana.setForeground(new java.awt.Color(255, 255, 255));
         jrb_mediana.setText("Mediana");
 
         jrb_media.setBackground(new java.awt.Color(204, 204, 204));
+        Grupo1.add(jrb_media);
         jrb_media.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jrb_media.setForeground(new java.awt.Color(255, 255, 255));
         jrb_media.setText("Media");
 
         jrb_varianza.setBackground(new java.awt.Color(204, 204, 204));
+        Grupo1.add(jrb_varianza);
         jrb_varianza.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jrb_varianza.setForeground(new java.awt.Color(255, 255, 255));
         jrb_varianza.setText("Varianza");
@@ -400,6 +404,7 @@ public class Estadistica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup Grupo1;
     private javax.swing.JButton btn_Regresar;
     private javax.swing.JButton btn_aceptar;
     private javax.swing.JButton btn_media;

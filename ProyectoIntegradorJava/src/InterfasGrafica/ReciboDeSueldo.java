@@ -258,13 +258,11 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
 
         hora = Double.parseDouble(txt_hora.getText());
         precio = Double.parseDouble(txt_precio.getText());
-
         sueldoBasico = hora * precio;
         bonificacion = sueldoBasico * 0.3;
         sueldoBruto = sueldoBasico + bonificacion;
         descuento = sueldoBruto * 0.1;
         sueldoNeto = sueldoBruto - descuento;
-
         txt_sueldo.setText(String.valueOf(sueldoBasico));
         txt_monto.setText(String.valueOf(bonificacion));
         txt_bruto.setText(String.valueOf(sueldoBruto));
