@@ -33,6 +33,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
         txt_hora = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txt_precio = new javax.swing.JTextField();
+        btn_regresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -135,6 +136,16 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
         txt_precio.setBackground(new java.awt.Color(255, 255, 255));
         txt_precio.setForeground(new java.awt.Color(0, 0, 0));
 
+        btn_regresar.setBackground(new java.awt.Color(204, 204, 204));
+        btn_regresar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        btn_regresar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_regresar.setText("Regresar");
+        btn_regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_regresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -156,13 +167,14 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(btn_calcular)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btn_calcular)
+                                .addGap(18, 18, 18)
+                                .addComponent(btn_nuevo)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btn_nuevo)
-                                .addGap(30, 30, 30)
+                                .addComponent(btn_regresar)
+                                .addGap(31, 31, 31)
                                 .addComponent(btn_salir))
                             .addComponent(txt_neto, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txt_descuento, javax.swing.GroupLayout.Alignment.TRAILING)))
@@ -175,7 +187,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
                             .addComponent(txt_monto, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                             .addComponent(txt_sueldo)
                             .addComponent(txt_bruto))))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,7 +222,8 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_calcular)
                     .addComponent(btn_nuevo)
-                    .addComponent(btn_salir))
+                    .addComponent(btn_salir)
+                    .addComponent(btn_regresar))
                 .addGap(22, 22, 22))
         );
 
@@ -268,6 +281,10 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btn_salirActionPerformed
 
+    private void btn_regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regresarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btn_regresarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -306,6 +323,7 @@ public class ReciboDeSueldo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_calcular;
     private javax.swing.JButton btn_nuevo;
+    private javax.swing.JButton btn_regresar;
     private javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

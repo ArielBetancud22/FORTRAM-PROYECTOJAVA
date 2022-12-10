@@ -43,6 +43,7 @@ public class Estadistica extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         btn_salir = new javax.swing.JButton();
+        btn_nuevo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Estadistica");
@@ -151,6 +152,16 @@ public class Estadistica extends javax.swing.JFrame {
             }
         });
 
+        btn_nuevo.setBackground(new java.awt.Color(204, 204, 204));
+        btn_nuevo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        btn_nuevo.setForeground(new java.awt.Color(0, 0, 0));
+        btn_nuevo.setText("Nuevo");
+        btn_nuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_nuevoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,13 +176,15 @@ public class Estadistica extends javax.swing.JFrame {
                         .addGap(11, 11, 11))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(72, 72, 72)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(42, 42, 42))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addContainerGap()
+                                    .addComponent(btn_nuevo)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(btn_mediana)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -215,7 +228,9 @@ public class Estadistica extends javax.swing.JFrame {
                         .addGap(13, 13, 13))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13)
-                .addComponent(btn_aceptar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_aceptar)
+                    .addComponent(btn_nuevo))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -345,6 +360,13 @@ public class Estadistica extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_salirActionPerformed
 
+    private void btn_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nuevoActionPerformed
+       jrb_mediana.setSelected(false);
+       jrb_media.setSelected(false);
+       jrb_varianza.setSelected(false);
+       jTextArea1.setText("");
+    }//GEN-LAST:event_btn_nuevoActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -382,6 +404,7 @@ public class Estadistica extends javax.swing.JFrame {
     private javax.swing.JButton btn_aceptar;
     private javax.swing.JButton btn_media;
     private javax.swing.JButton btn_mediana;
+    private javax.swing.JButton btn_nuevo;
     private javax.swing.JButton btn_salir;
     private javax.swing.JButton btn_varianza;
     private javax.swing.JLabel jLabel1;

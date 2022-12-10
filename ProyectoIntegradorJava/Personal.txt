@@ -1,3 +1,5 @@
 Gisela |Vizcaino|24125367|27241253673|Contratado|160000
 Facundo| Sanchez|40125478|25401254783|Planta Permanente|220000
 Gabriel|Hidalgo|ddd|ddd|Contratado|160000.0
+Marcos|Lopez|41032478|21410324785|Contratado|160000
+Jhonatan |Sanchez|28457963|24284579633|Planta Permanente|220000.0
