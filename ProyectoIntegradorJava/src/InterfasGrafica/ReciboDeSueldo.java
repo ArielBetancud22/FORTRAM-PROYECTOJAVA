@@ -1,10 +1,12 @@
 package InterfasGrafica;
+import img.ImgFondo;
 
 
 
 public class ReciboDeSueldo extends javax.swing.JFrame {
 
     public ReciboDeSueldo() {
+        ImgFondo p = new ImgFondo();
         initComponents();
         this.setLocationRelativeTo(null);
            }
