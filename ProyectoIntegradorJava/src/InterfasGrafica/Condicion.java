@@ -5,9 +5,10 @@ import javax.swing.JOptionPane;
 
 public class Condicion extends javax.swing.JFrame {
 
-    ImgFondo p = new ImgFondo();
+    
 
     public Condicion() {
+        ImgFondo p = new ImgFondo();
         this.setContentPane(new ImgFondo());
         initComponents();
     }
