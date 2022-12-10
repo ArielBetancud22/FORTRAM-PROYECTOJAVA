@@ -8,7 +8,6 @@ public class Condicion extends javax.swing.JFrame {
     
 
     public Condicion() {
-        ImgFondo p = new ImgFondo();
         this.setContentPane(new ImgFondo());
         initComponents();
     }
@@ -31,19 +30,21 @@ public class Condicion extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ELIJA UNA OPCION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ELIJA UNA OPCION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel1.setOpaque(false);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PERSONAL", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PERSONAL", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel2.setOpaque(false);
 
-        chk_contratado.setBackground(new java.awt.Color(204, 204, 204));
+        chk_contratado.setBackground(new java.awt.Color(255, 255, 255));
         chk_contratado.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        chk_contratado.setForeground(new java.awt.Color(0, 0, 0));
+        chk_contratado.setForeground(new java.awt.Color(255, 255, 255));
         chk_contratado.setText("CONTRATADO");
 
-        chk_planta.setBackground(new java.awt.Color(204, 204, 204));
+        chk_planta.setBackground(new java.awt.Color(255, 255, 255));
         chk_planta.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        chk_planta.setForeground(new java.awt.Color(0, 0, 0));
+        chk_planta.setForeground(new java.awt.Color(255, 255, 255));
         chk_planta.setText("PLANTA PERMANENTE");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -68,7 +69,8 @@ public class Condicion extends javax.swing.JFrame {
         );
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "HAGA CLIC EN:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "HAGA CLIC EN:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setOpaque(false);
 
         btn_deposito.setBackground(new java.awt.Color(204, 204, 204));
         btn_deposito.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
