@@ -1,6 +1,5 @@
 package InterfasGrafica;
 
-import MenuOpciones.MenuOpciones;
 import Metodos.Metodos;
 import Personal.Personal;
 import img.ImgFondo;
@@ -31,6 +30,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         this.cabecera.addElement("CUIT");
         this.cabecera.addElement("Categoria");
         this.cabecera.addElement("Sueldo");
+        this.cabecera.addElement("Sexo");
         mdlTable = new DefaultTableModel(cabecera, 0);
         jtb_registropersonal.setModel(mdlTable);
         this.setTitle("Registro Del Personal");
@@ -63,12 +63,12 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         btn_actualizar = new javax.swing.JButton();
         btn_baja = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
+        jcb_sexo = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(204, 153, 255));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.setToolTipText("INGRESO DE DATOS DEL PERSONAL");
         jPanel1.setOpaque(false);
 
@@ -84,9 +84,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         jlb_nombre.setText("Nombre");
         jlb_nombre.setToolTipText("");
 
-        txt_nombre.setBackground(new java.awt.Color(255, 255, 255));
         txt_nombre.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        txt_nombre.setForeground(new java.awt.Color(0, 0, 0));
         txt_nombre.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txt_nombre.setToolTipText("");
         txt_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -100,9 +98,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText("Apellido");
 
-        txt_apellido.setBackground(new java.awt.Color(255, 255, 255));
         txt_apellido.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        txt_apellido.setForeground(new java.awt.Color(0, 0, 0));
         txt_apellido.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jLabel3.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
@@ -110,7 +106,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("DNI");
 
-        txt_dni.setBackground(new java.awt.Color(255, 255, 255));
         txt_dni.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         txt_dni.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
@@ -119,9 +114,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("CUIT");
 
-        txt_cuit.setBackground(new java.awt.Color(255, 255, 255));
         txt_cuit.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        txt_cuit.setForeground(new java.awt.Color(0, 0, 0));
         txt_cuit.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jcb_categoria.setBackground(new java.awt.Color(153, 153, 153));
@@ -149,7 +142,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
 
         jbt_regresar.setBackground(new java.awt.Color(153, 153, 153));
         jbt_regresar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        jbt_regresar.setForeground(new java.awt.Color(0, 0, 0));
         jbt_regresar.setText("Regresar");
         jbt_regresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -164,7 +156,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
 
         Jbt_guardar.setBackground(new java.awt.Color(153, 153, 153));
         Jbt_guardar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        Jbt_guardar.setForeground(new java.awt.Color(0, 0, 0));
         Jbt_guardar.setText("Guardar");
         Jbt_guardar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,7 +165,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
 
         btn_actualizar.setBackground(new java.awt.Color(153, 153, 153));
         btn_actualizar.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btn_actualizar.setForeground(new java.awt.Color(0, 0, 0));
         btn_actualizar.setText("Actualizar");
         btn_actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +174,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
 
         btn_baja.setBackground(new java.awt.Color(153, 153, 153));
         btn_baja.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btn_baja.setForeground(new java.awt.Color(0, 0, 0));
         btn_baja.setText("Baja");
         btn_baja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,11 +183,20 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
 
         btn_salir.setBackground(new java.awt.Color(153, 153, 153));
         btn_salir.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btn_salir.setForeground(new java.awt.Color(0, 0, 0));
         btn_salir.setText("Salir");
         btn_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_salirActionPerformed(evt);
+            }
+        });
+
+        jcb_sexo.setBackground(new java.awt.Color(153, 153, 153));
+        jcb_sexo.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jcb_sexo.setForeground(new java.awt.Color(255, 255, 255));
+        jcb_sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sexo", "Masculino", "Femenino" }));
+        jcb_sexo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb_sexoActionPerformed(evt);
             }
         });
 
@@ -235,7 +233,9 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jcb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31)
-                                .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jcb_sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(197, 197, 197))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -267,7 +267,8 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
                     .addComponent(jcb_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jcb_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcb_sexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -320,6 +321,8 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         String cuit = txt_cuit.getText();
         String categoria = jcb_categoria.getSelectedItem().toString();
         double sueldo = Double.parseDouble(jcb_sueldo.getSelectedItem().toString());
+        
+        String Sexo = jcb_sexo.getSelectedItem().toString();
 
         personal.setNombre(nombre);
         personal.setApellido(apellido);
@@ -327,6 +330,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
         personal.setCuit(cuit);
         personal.setCategoria(categoria);
         personal.setSueldo(sueldo);
+        personal.setSexo(Sexo);
         metodos.guardar(personal);
         metodos.guardarArchivo(personal);
         JOptionPane.showMessageDialog(null, "Registro cargado con exito");
@@ -346,8 +350,6 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_regresarActionPerformed
 
     private void jbt_regresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt_regresarMouseClicked
-        MenuOpciones Menu = new MenuOpciones();
-        Menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbt_regresarMouseClicked
 
@@ -364,6 +366,10 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_btn_salirActionPerformed
+
+    private void jcb_sexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_sexoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcb_sexoActionPerformed
     public void filtro() {
         filtro = txt_nombre.getText();
         trsfiltro.setRowFilter(RowFilter.regexFilter(txt_nombre.getText(), 0));
@@ -415,6 +421,7 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbt_regresar;
     private javax.swing.JComboBox<String> jcb_categoria;
+    private javax.swing.JComboBox<String> jcb_sexo;
     private javax.swing.JComboBox<String> jcb_sueldo;
     private javax.swing.JLabel jlb_nombre;
     private javax.swing.JTable jtb_registropersonal;
@@ -424,3 +431,4 @@ public class IngresoDatosPersonal extends javax.swing.JFrame {
     private javax.swing.JTextField txt_nombre;
     // End of variables declaration//GEN-END:variables
 }
+
