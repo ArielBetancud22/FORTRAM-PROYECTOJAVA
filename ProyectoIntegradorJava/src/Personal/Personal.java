@@ -78,5 +78,11 @@ public class Personal {
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
+    public String getSexo(){
+        return this.sexo;
+    }
+    public void setSexo(String sexo){
+        this.sexo = sexo;
+    }
 
 }
