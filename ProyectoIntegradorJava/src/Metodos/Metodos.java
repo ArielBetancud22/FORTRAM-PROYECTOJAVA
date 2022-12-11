@@ -23,8 +23,10 @@ public class Metodos {
             pw.print("|" + personal.getApellido());
             pw.print("|" + personal.getDni());
             pw.print("|" + personal.getCuit());
+            pw.print("|" + personal.getFechaIngreso());
             pw.print("|" + personal.getCategoria());
-            pw.println("|" + personal.getSueldo());
+            pw.print("|" + personal.getSueldo());
+            pw.println("|" + personal.getSexo());
             pw.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
@@ -37,8 +39,10 @@ public class Metodos {
         datos.addElement("Apellido");
         datos.addElement("DNI");
         datos.addElement("CUIT");
+        datos.addElement("Fecha Ingreso");
         datos.addElement("Categoria");
         datos.addElement("Sueldo");
+        datos.addElement("Sexo");
 
         DefaultTableModel mdlTable = new DefaultTableModel(datos, 0);
         try {
